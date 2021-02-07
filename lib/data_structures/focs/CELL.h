@@ -12,10 +12,32 @@
 //This sentences defines a type called LIST
 //wich contains a pointer to a struct
 //defined in turn as CELL.
-typedef struct CELL *LIST;
+typedef struct INT_CELL *INT_LIST;
 
 //The CELL struct is defined here:
-struct CELL {
+struct INT_CELL {
     int element;
-    LIST next;
+    INT_LIST next;
+};
+
+//Repeating for other data types we may want in
+//linked lists.
+//TODO: Find a way to stop repeating ourselves.
+
+typedef struct CHAR_CELL *CHAR_LIST;
+struct CHAR_CELL {
+    char element;
+    CHAR_LIST next;
+};
+
+typedef struct FLOAT_CELL *FLOAT_LIST;
+struct FLOAT_CELL {
+    float element;
+    FLOAT_LIST next;
+};
+
+typedef struct DOUBLE_CELL *DOUBLE_LIST;
+struct DOUBLE_CELL {
+    double element;
+    DOUBLE_LIST next;
 };
