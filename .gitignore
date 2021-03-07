@@ -4,3 +4,4 @@
 .vscode/c_cpp_properties.json
 linked_list
 lista_ligada
+*.bin
