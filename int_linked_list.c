@@ -60,33 +60,6 @@ int main(){
 
     }
 
-    //Creamos nuestra lista
-
-    //printf("DEBUG: lista_de_enteros: %p\n", lista_de_enteros);
-    
-    /**
-    int val1 = 1;
-    int val2 = 10;
-    int val3 = 2;
-
-    lista_de_enteros = insert_int( lista_de_enteros , val1);
-    //printf("DEBUG: lista_de_enteros al regresar de primera adicion: %p\n",lista_de_enteros);
-    lista_de_enteros = insert_int( lista_de_enteros , val2);
-    //printf("DEBUG: lista_de_enteros al regresar de segunda adicion: %p\n",lista_de_enteros);
-    lista_de_enteros = insert_int( lista_de_enteros , val3);
-    printf("DEBUG: lista_de_enteros al regresar de tercera adición: %p\n",lista_de_enteros);
-    lista_de_enteros = insert_int( lista_de_enteros , 300);
-    lista_de_enteros = insert_int( lista_de_enteros , 130);
-
-    print_int_list(lista_de_enteros);
-
-    lista_de_enteros = delete_last_int(lista_de_enteros);
-    printf("DEBUG: lista_de_enteros al borrar: %p\n",lista_de_enteros);
-
-    print_int_list(lista_de_enteros);
-
-    */
-
 }
 
 void instrucciones(void){
@@ -186,21 +159,19 @@ int  eliminar_last(ptrNodoLista *ptrList){
 
     //printf("Nuevo nodo Final:\n");
     if(ptrAnteAnte == NULL){
-        printf("DEBUG: Elemento de una sola lista.\n");
-        printf("Elemento a borrar: ");
-        printf("%d\n",dataToRetrieve);
-        printf("Nueva elemento final será: NULL\n");
+        //printf("DEBUG: Elemento de una sola lista.\n");
+        //printf("Elemento a borrar: ");
+        //printf("%d\n",dataToRetrieve);
         ptrToKill = *ptrList;
         *ptrList = NULL;
-        free(ptrToKill);
     }else{
         ptrToKill = ptrAnterior;
-        printf("DEBUG: Elemento de mas de una lista\n");
-        printf("Elemento a borrar: %d\n",dataToRetrieve);
-        printf("Nuevo elemeno final será %d\n",ptrAnteAnte->dato);
+        //printf("DEBUG: Elemento de mas de una lista\n");
+        //printf("Elemento a borrar: %d\n",dataToRetrieve);
+        //printf("Nuevo elemeno final será %d\n",ptrAnteAnte->dato);
         ptrAnteAnte->ptrSiguiente = NULL;
-        free(ptrToKill);
     }
 
+    free(ptrToKill);
     return dataToRetrieve;
 }
