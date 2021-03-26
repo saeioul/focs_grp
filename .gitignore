@@ -1,6 +1,4 @@
-.vscode/launch.json
-.vscode/tasks.json
+.vscode/*
 *.dSYM
-.vscode/c_cpp_properties.json
-linked_list
-lista_ligada
+*.bin
+.DS_Store

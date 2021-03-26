@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lib/data_structures/focs/CELL.h"
+#include "lib/data_structures/focs/LIST.h"
 
 int valor = 10;
 char letra = '!';
